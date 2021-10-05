@@ -10,5 +10,4 @@ Selam arkadaşlar buraya bazı yerlerde gördüğüm istenen butonlu bir mute  k
 <hr>
 
 
-<strong>•</strong> Diğer Butonlu Bir Projem Olan Butonlu Menüyü Görmek İçin 
-<a href link="https://github.com/Cennk/Discord-buton-menu">
+<strong>•</strong> Diğer Butonlu Bir Projem Olan Butonlu Menüyü Görmek İçin = https://github.com/Cennk/Discord-buton-menu
