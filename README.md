@@ -1,7 +1,7 @@
 # Discord-Button-Mute
 
 
-Selam arkadaşlar buraya nazı yerlerde gördüğüm istenen butonlu bir mute  komut dosyası bırakıyorum gerekli yerleri kafanıza göre editler yada row vs. ekleyerek butonları arttırabilirsiniz
+Selam arkadaşlar buraya bazı yerlerde gördüğüm istenen butonlu bir mute  komut dosyası bırakıyorum gerekli yerleri kafanıza göre editler yada row vs. ekleyerek butonları arttırabilirsiniz
 
  <hr>
 
@@ -10,5 +10,5 @@ Selam arkadaşlar buraya nazı yerlerde gördüğüm istenen butonlu bir mute  k
 <hr>
 
 
-<strong>•</strong> Diğer Butonlu Bir Projem Olan Butonlu Menüyü Gömrek İçin 
-<a link="https://github.com/Cennk/Discord-buton-menu">
+<strong>•</strong> Diğer Butonlu Bir Projem Olan Butonlu Menüyü Görmek İçin 
+<a href link="https://github.com/Cennk/Discord-buton-menu">
