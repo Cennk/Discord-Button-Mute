@@ -11,4 +11,4 @@ Selam arkadaşlar buraya nazı yerlerde gördüğüm istenen butonlu bir mute  k
 
 
 <strong>•</strong> Diğer Butonlu Bir Projem Olan Butonlu Menüyü Gömrek İçin 
-< link="https://github.com/Cennk/Discord-buton-menu">
+<a link="https://github.com/Cennk/Discord-buton-menu">
