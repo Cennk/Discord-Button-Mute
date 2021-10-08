@@ -5,7 +5,8 @@ module.exports.operate = async ({client, msg, args, author, uye, cfg}, ms = requ
     const moment = require("moment");
 
     let Sayi = 0;
-
+    client.komutSayisiArttir({Database: require("../models/Member.js"), msg: msg, sayi: 1, type: "cmute"});
+    new Database({CezaID: Sayi, Type: "MUTE", userID: uye.id, Author: author.id, Reason: reason, DateNow: new Date(), Activity: true, Temporary: true}).save();
 
     if ((!author.roles.cache.some(r => cfg.hammers.voiceMuteHammer.includes(r.id))) && (!author.hasPermission("MANAGE_ROLES"))) return client.message(client.yetersizEmbed(msg), msg.channel.id, 5000);
     if (!uye) return client.message(client.uyeEmbed(msg), msg.channel.id, 5000);
@@ -90,9 +91,6 @@ module.exports.operate = async ({client, msg, args, author, uye, cfg}, ms = requ
           const reason = `Ailevi Küfür`
           const Sure = ms('20m')
           if (cfg.cezaliRoller.muteRoles !== "") await uye.roles.add(cfg.cezaliRoller.muteRoles).catch();
-
-          client.komutSayisiArttir({Database: require("../models/Member.js"), msg: msg, sayi: 1, type: "cmute"});
-          new Database({CezaID: Sayi, Type: "MUTE", userID: uye.id, Author: author.id, Reason: reason, DateNow: new Date(), Activity: true, Temporary: true}).save();
           button.reply.defer()
           msg.channel.send(`${uye} kişisi **1 dakika** boyunca tarafından chat kanalları üzerinden susturuldu \`(Ceza ID: #${Sayi})\``)
             .then(msg.delete({ timeout: 1500 })).then((x) => x.delete({ timeout: 5000 })); 
@@ -125,7 +123,6 @@ if (button.id === "ceza2") {
     member.roles.add(cfg.cezaliRoller.muteRoles);
     const reason = `Küfür`
     const Sure = ms('10m')
-    new Database({CezaID: Sayi, Type: "MUTE", userID: uye.id, Author: author.id, Reason: reason, DateNow: new Date(), Activity: true, Temporary: true, FinishDate: (Date.now() + ms(Sure))}).save();
     button.reply.defer()
   msg.channel.send(`${uye} üyesi, ${author} tarafından, \`${reason}\` nedeniyle susturuldu! \`(Ceza ID: #${Sayi})\``)
     .then(msg.delete({ timeout: 1500 })).then((x) => x.delete({ timeout: 5000 })); 
@@ -149,7 +146,6 @@ if (button.id === "ceza3") {
     member.roles.add(cfg.cezaliRoller.muteRoles);
   const reason = `Flood/Spam`
   const Sure = ms('10m')
-  new Database({CezaID: Sayi, Type: "MUTE", userID: uye.id, Author: author.id, Reason: reason, DateNow: new Date(), Activity: true, Temporary: true, FinishDate: (Date.now() + ms(Sure))}).save();
   button.reply.defer()
   msg.channel.send(`${uye} üyesi, ${author} tarafından, \`${reason}\` nedeniyle susturuldu! \`(Ceza ID: #${Sayi})\``)
   .then(msg.delete({ timeout: 1500 })).then((x) => x.delete({ timeout: 5000 })); 
@@ -174,7 +170,6 @@ if (button.id === "ceza4") {
     member.roles.add(cfg.cezaliRoller.muteRoles);
   const reason = `Tartışma/Kavga`
   const Sure = ms('15m')
-  new Database({CezaID: Sayi, Type: "MUTE", userID: uye.id, Author: author.id, Reason: reason, DateNow: new Date(), Activity: true, Temporary: true, FinishDate: (Date.now() + ms(Sure))}).save();
 button.reply.defer()
 msg.channel.send(`${uye} üyesi, ${author} tarafından, \`${reason}\` nedeniyle susturuldu! \`(Ceza ID: #${Sayi})\``)
 .then(msg.delete({ timeout: 1500 })).then((x) => x.delete({ timeout: 5000 })); 
